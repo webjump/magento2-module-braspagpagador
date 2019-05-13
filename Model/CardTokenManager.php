@@ -105,7 +105,7 @@ class CardTokenManager implements CardTokenManagerInterface
                 $this->getCardTokenRepository()->save($cardToken);
             }
 
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             throw new \Magento\Framework\Exception\LocalizedException(__('Unable to disable Card Token'));
         }
     }
