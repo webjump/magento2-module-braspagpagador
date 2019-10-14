@@ -78,6 +78,7 @@ define(
 
                 if (
                     this.creditCardType() === 'Cielo-Amex' ||
+                    this.creditCardType() === 'Cielo30-Amex' ||
                     this.creditCardType() === 'CieloSitef-Amex'
                 ){
                     maxlength = 4;
