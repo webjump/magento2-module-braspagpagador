@@ -13,7 +13,7 @@ namespace Webjump\BraspagPagador\Api;
 interface Auth3Ds20TokenManagerInterface
 {
     /**
-     * @return array
+     * @return mixed
      */
     public function getToken();
 }
