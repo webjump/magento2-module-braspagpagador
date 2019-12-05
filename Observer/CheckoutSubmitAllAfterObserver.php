@@ -51,7 +51,9 @@ class CheckoutSubmitAllAfterObserver implements ObserverInterface
 
         try {
 
-            if ($this->config->isAuthorizeAndCapture() && $order->getId()
+            if ($this->config->isAuthorizeAndCapture()
+                && $order->getId()
+                && preg_match("#braspag_pagador_creditcard#is", $payment->getMethodInstance()->getCode())
             ) {
                 if ($payment->getIsFraudDetected()
                     && $payment->getMethodInstance()->getConfigData('reject_order_status') === 'canceled'
